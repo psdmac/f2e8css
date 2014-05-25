@@ -617,7 +617,9 @@ $(document).ready(function() {
     editorHeight = $(window).height() - titleHeight;
     $('.editor-wrapper').css('height', editorHeight + 'px');
     $('.view-wrapper').css('height', editorHeight + 'px');
-    return $('.editor').css('height', editorHeight / 2 + 'px');
+    $('.view').css('height', editorHeight - 19 + 'px');
+    $('.editor-slide-wrapper').css('height', editorHeight / 2 + 'px');
+    return $('.editor').css('height', editorHeight / 2 - 19 + 'px');
   };
   resize();
   return $(window).on('resize', function() {

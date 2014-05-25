@@ -125,3 +125,19 @@ body {
 .editor {
   font-size: 16px !important;
 }
+.codepen {
+  @include inline-block();
+  width: 126px;
+  height: 63px;
+  margin-top: -6px;
+  // padding: 8px 12px;
+  background: rgba(0,0,0,1);
+  // @include box-shadow(inset 0px -5px 0px 0px rgba(0, 0, 0, 0.7));
+  border-radius: 8px;
+  @include background-image(url(../img/White-Large.png));
+  @include background-size(100%);
+}
+.sub-title {
+  background: #000;
+  padding-left: 10px;
+}

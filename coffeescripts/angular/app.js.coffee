@@ -633,7 +633,9 @@ $(document).ready ->
     editorHeight = $(window).height() - titleHeight
     $('.editor-wrapper').css('height', editorHeight + 'px')
     $('.view-wrapper').css('height', editorHeight + 'px')
-    $('.editor').css('height', editorHeight/2 + 'px')
+    $('.view').css('height', editorHeight - 19 + 'px')
+    $('.editor-slide-wrapper').css('height', editorHeight/2 + 'px')
+    $('.editor').css('height', editorHeight/2 - 19 + 'px')
   resize()
   $(window).on 'resize', ->
     console.log 'resize...'
