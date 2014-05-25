@@ -110,8 +110,53 @@ body {
     height: 300px;
     overflow: scroll;
   }
-  .slide1 {
+  .slide1, .slide4 {
     background: #fff;
     color: #000;
   }
+}
+
+
+.wrap-dotted {
+  display: inline-block;
+  text-align: center;
+  margin-left: 50px;
+  div {
+    border-style: dotted;
+  }
+}
+
+.wrap-dashed {
+  display: inline-block;
+  text-align: center;
+  margin-left: 50px;
+  div {
+    border-style: dashed;
+  }
+}
+
+.box1 {
+  border-width: 3px;
+  border-color: #999;
+  width: 100px;
+  height: 100px;
+  margin: 20px;
+}
+
+.box2 {
+  border-width: 3px;
+  border-color: #999;
+  width: 100px;
+  height: 100px;
+  margin: 20px;
+  border-radius: 50%;
+}
+
+.box3 {
+  border-width: 3px;
+  border-color: #999;
+  width: 100px;
+  height: 100px;
+  margin: 20px;
+  border-radius: 20%;
 }

@@ -4,7 +4,7 @@ myApp = angular.module('myApp', ['ngSanitize']);
 
 myApp.controller('MainCtrl', [
   '$scope', '$timeout', '$sce', function($scope, $timeout, $sce) {
-    var editor_1_css, editor_1_html, editor_2_css, editor_2_html, editor_3_css, editor_3_html, mySwiper;
+    var editor_1_css, editor_1_html, editor_2_css, editor_2_html, editor_3_css, editor_3_html, editor_4_css, editor_4_html, mySwiper;
 
     mySwiper = new Swiper('.swiper-container', {
       pagination: '.pagination',
@@ -385,8 +385,80 @@ h2 {\n\
   background: #000000;\n\
 }\n\n');
     $scope.bindCss3 = $sce.trustAsHtml(editor_3_css.getValue());
-    return editor_3_css.getSession().on('change', function(e) {
+    editor_3_css.getSession().on('change', function(e) {
       $scope.bindCss3 = $sce.trustAsHtml(editor_3_css.getValue());
+      return $scope.$apply();
+    });
+    editor_4_html = ace.edit('editor-slide-4-html');
+    editor_4_html.setTheme("ace/theme/monokai");
+    editor_4_html.getSession().setMode("ace/mode/html");
+    editor_4_html.setValue('<div class="wrap-dotted">dotted\n\
+    <div class="box1"></div>\n\
+    <div class="box2"></div>\n\
+    <div class="box3"></div>\n\
+  </div>\n\
+  <div class="wrap-dashed">dashed\n\
+    <div class="box1"></div>\n\
+    <div class="box2"></div>\n\
+    <div class="box3"></div>\n\
+  </div>\n');
+    $scope.bindHtml4 = $sce.trustAsHtml(editor_4_html.getValue());
+    editor_4_html.getSession().on('change', function(e) {
+      $scope.bindHtml4 = $sce.trustAsHtml(editor_4_html.getValue());
+      return $scope.$apply();
+    });
+    editor_4_css = ace.edit('editor-slide-4-css');
+    editor_4_css.setTheme("ace/theme/monokai");
+    editor_4_css.getSession().setMode("ace/mode/css");
+    editor_4_css.setValue('\
+.wrap-dotted {\n\
+  display: inline-block;\n\
+  text-align: center;\n\
+  margin-left: 50px;\n\
+}\n\
+\n\
+.wrap-dotted div {\n\
+  border-style: dotted;\n\
+}\n\
+\n\
+.wrap-dashed {\n\
+  display: inline-block;\n\
+  text-align: center;\n\
+  margin-left: 50px;\n\
+}\n\
+\n\
+.wrap-dashed div {\n\
+  border-style: dashed;\n\
+}\n\
+\n\
+.box1 {\n\
+  border-width: 3px;\n\
+  border-color: #999;\n\
+  width: 100px;\n\
+  height: 100px;\n\
+  margin: 20px;\n\
+}\n\
+\n\
+.box2 {\n\
+  border-width: 3px;\n\
+  border-color: #999;\n\
+  width: 100px;\n\
+  height: 100px;\n\
+  margin: 20px;\n\
+  border-radius: 50%;\n\
+}\n\
+\n\
+.box3 {\n\
+  border-width: 3px;\n\
+  border-color: #999;\n\
+  width: 100px;\n\
+  height: 100px;\n\
+  margin: 20px;\n\
+  border-radius: 20%;\n\
+}\n\n');
+    $scope.bindCss4 = $sce.trustAsHtml(editor_4_css.getValue());
+    return editor_4_css.getSession().on('change', function(e) {
+      $scope.bindCss4 = $sce.trustAsHtml(editor_4_css.getValue());
       return $scope.$apply();
     });
   }

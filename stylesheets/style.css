@@ -466,9 +466,60 @@ body {
   overflow: scroll;
 }
 /* line 113, ../sass/partials/_page.scss */
-.swiper-slide .slide1 {
+.swiper-slide .slide1, .swiper-slide .slide4 {
   background: #fff;
   color: #000;
+}
+
+/* line 120, ../sass/partials/_page.scss */
+.wrap-dotted {
+  display: inline-block;
+  text-align: center;
+  margin-left: 50px;
+}
+/* line 124, ../sass/partials/_page.scss */
+.wrap-dotted div {
+  border-style: dotted;
+}
+
+/* line 129, ../sass/partials/_page.scss */
+.wrap-dashed {
+  display: inline-block;
+  text-align: center;
+  margin-left: 50px;
+}
+/* line 133, ../sass/partials/_page.scss */
+.wrap-dashed div {
+  border-style: dashed;
+}
+
+/* line 138, ../sass/partials/_page.scss */
+.box1 {
+  border-width: 3px;
+  border-color: #999;
+  width: 100px;
+  height: 100px;
+  margin: 20px;
+}
+
+/* line 146, ../sass/partials/_page.scss */
+.box2 {
+  border-width: 3px;
+  border-color: #999;
+  width: 100px;
+  height: 100px;
+  margin: 20px;
+  border-radius: 50%;
+}
+
+/* line 155, ../sass/partials/_page.scss */
+.box3 {
+  border-width: 3px;
+  border-color: #999;
+  width: 100px;
+  height: 100px;
+  margin: 20px;
+  border-radius: 20%;
 }
 
 /* line 7, ../../../../../../Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/compass-h5bp-0.1.1/stylesheets/h5bp/_helpers.scss */

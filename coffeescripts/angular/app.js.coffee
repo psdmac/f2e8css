@@ -398,6 +398,82 @@ h2 {\n
     $scope.$apply()
   )
   # Slide_3 End
+
+  # Slide_4 Begin
+  editor_4_html = ace.edit('editor-slide-4-html')
+  editor_4_html.setTheme "ace/theme/monokai"
+  editor_4_html.getSession().setMode "ace/mode/html"
+  editor_4_html.setValue('<div class="wrap-dotted">dotted\n
+    <div class="box1"></div>\n
+    <div class="box2"></div>\n
+    <div class="box3"></div>\n
+  </div>\n
+  <div class="wrap-dashed">dashed\n
+    <div class="box1"></div>\n
+    <div class="box2"></div>\n
+    <div class="box3"></div>\n
+  </div>\n')
+  $scope.bindHtml4 = $sce.trustAsHtml(editor_4_html.getValue())
+  editor_4_html.getSession().on('change', (e)->
+    $scope.bindHtml4 = $sce.trustAsHtml(editor_4_html.getValue())
+    $scope.$apply()
+  )
+
+  editor_4_css = ace.edit('editor-slide-4-css')
+  editor_4_css.setTheme "ace/theme/monokai"
+  editor_4_css.getSession().setMode "ace/mode/css"
+  editor_4_css.setValue('
+.wrap-dotted {\n
+  display: inline-block;\n
+  text-align: center;\n
+  margin-left: 50px;\n
+}\n
+\n
+.wrap-dotted div {\n
+  border-style: dotted;\n
+}\n
+\n
+.wrap-dashed {\n
+  display: inline-block;\n
+  text-align: center;\n
+  margin-left: 50px;\n
+}\n
+\n
+.wrap-dashed div {\n
+  border-style: dashed;\n
+}\n
+\n
+.box1 {\n
+  border-width: 3px;\n
+  border-color: #999;\n
+  width: 100px;\n
+  height: 100px;\n
+  margin: 20px;\n
+}\n
+\n
+.box2 {\n
+  border-width: 3px;\n
+  border-color: #999;\n
+  width: 100px;\n
+  height: 100px;\n
+  margin: 20px;\n
+  border-radius: 50%;\n
+}\n
+\n
+.box3 {\n
+  border-width: 3px;\n
+  border-color: #999;\n
+  width: 100px;\n
+  height: 100px;\n
+  margin: 20px;\n
+  border-radius: 20%;\n
+}\n\n')
+  $scope.bindCss4= $sce.trustAsHtml(editor_4_css.getValue())
+  editor_4_css.getSession().on('change', (e)->
+    $scope.bindCss4 = $sce.trustAsHtml(editor_4_css.getValue())
+    $scope.$apply()
+  )
+  # Slide_4 End
 ]
 
 $(document).ready ->
