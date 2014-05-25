@@ -474,6 +474,157 @@ h2 {\n
     $scope.$apply()
   )
   # Slide_4 End
+
+  # Slide_5 Begin
+  editor_5_html = ace.edit('editor-slide-5-html')
+  editor_5_html.setTheme "ace/theme/monokai"
+  editor_5_html.getSession().setMode "ace/mode/html"
+  editor_5_html.setValue('<div class="dialog effect">\n
+  this is a dialog .\n
+</div>\n')
+  $scope.bindHtml5 = $sce.trustAsHtml(editor_5_html.getValue())
+  editor_5_html.getSession().on('change', (e)->
+    $scope.bindHtml5 = $sce.trustAsHtml(editor_5_html.getValue())
+    $scope.$apply()
+  )
+
+  editor_5_css = ace.edit('editor-slide-5-css')
+  editor_5_css.setTheme "ace/theme/monokai"
+  editor_5_css.getSession().setMode "ace/mode/css"
+  editor_5_css.setValue('.dialog{\n
+  width: 200px;\n
+  height: 200px;\n
+  position: absolute;\n
+  margin: auto;\n
+  left: 0;\n
+  right: 0;\n
+  bottom: 0;\n
+  top: 0;\n
+  background: #CCC;\n
+}\n
+.effect{\n
+  text-align: center;\n
+  line-height: 200px;\n
+  box-shadow: 3px 2px 3px rgba(0,0,0,0.5);\n
+  border-radius:10px;\n
+}\n\n')
+  $scope.bindCss5= $sce.trustAsHtml(editor_5_css.getValue())
+  editor_5_css.getSession().on('change', (e)->
+    $scope.bindCss5 = $sce.trustAsHtml(editor_5_css.getValue())
+    $scope.$apply()
+  )
+  # Slide_5 End
+
+  # Slide_6 Begin
+  editor_6_html = ace.edit('editor-slide-6-html')
+  editor_6_html.setTheme "ace/theme/monokai"
+  editor_6_html.getSession().setMode "ace/mode/html"
+  editor_6_html.setValue('<form action="" method="post" enctype="multipart/form-data">/n
+  For IE9 up\n
+  <br>\n
+  <br>\n
+    <label for="file-style" class="btn">\n
+      <span>Select file to upload</span>\n
+    </label>\n
+    <input type="file" name="file_2" id="file-style">\n
+    <br>\n
+    <br>\n
+    Checkbox: <input type="checkbox" name="check" value="1">\n
+    <span class="check"></span>\n
+    <br>\n
+    <br>\n
+    <input type="radio" name="sex" value="male">\n
+    <span class="check"></span>Male\n
+    <br>\n
+    <input type="radio" name="sex" value="female">\n
+    <span class="check"></span>Female\n
+    <br>\n
+    <br>\n
+    <input type="submit" class="">\n
+</form>\n')
+  $scope.bindHtml6 = $sce.trustAsHtml(editor_6_html.getValue())
+  editor_6_html.getSession().on('change', (e)->
+    $scope.bindHtml6 = $sce.trustAsHtml(editor_6_html.getValue())
+    $scope.$apply()
+  )
+
+  editor_6_css = ace.edit('editor-slide-6-css')
+  editor_6_css.setTheme "ace/theme/monokai"
+  editor_6_css.getSession().setMode "ace/mode/css"
+  editor_6_css.setValue('#file-style {\n
+  opacity: 0;\n
+  width: 0;\n
+  height: 0;\n
+  display: none;\n
+}\n
+.btn {\n
+  background: #00aaff;\n
+  padding: 10px;\n
+  border: solid #0088ff;\n
+}\n
+.btn:hover {\n
+  background: #ff8800;\n
+}\n
+.btn:active {\n
+  background: #0088ff;\n
+  padding: 10px;\n
+  border: solid #00aaff;\n
+}\n
+input[type="checkbox"] {\n
+  position: absolute;\n
+  z-index: 1;\n
+  opacity: 0;\n
+  width: 40px;\n
+  height: 20px;\n
+}\n
+.check {\n
+  position: relative;\n
+  z-index: 0;\n
+  text-align: center;\n
+}\n
+input[type="checkbox"]+.check:after {\n
+  content: "OFF";\n
+  display: inline-block;\n
+  background: #ddd;\n
+  width: 40px;\n
+  height: 20px;\n
+}\n
+input[type="checkbox"]:checked+.check:after {\n
+  content: "ON";\n
+  display: inline-block;\n
+  background: #df002f;\n
+  width: 40px;\n
+  height: 20px;\n
+}\n
+input[type="radio"] {\n
+  position: absolute;\n
+  z-index: 1;\n
+  opacity: 0;\n
+  width: 40px;\n
+  height: 20px;\n
+}\n
+input[type="radio"]+.check:after {\n
+  content: "";\n
+  display: inline-block;\n
+  background: #ddd;\n
+  width: 20px;\n
+  height: 20px;\n
+  border-radius: 10px;\n
+}\n
+input[type="radio"]:checked+.check:after {\n
+  content: "";\n
+  display: inline-block;\n
+  background: #df002f;\n
+  width: 20px;\n
+  height: 20px;\n
+  border-radius: 10px;\n
+}\n\n')
+  $scope.bindCss6= $sce.trustAsHtml(editor_6_css.getValue())
+  editor_6_css.getSession().on('change', (e)->
+    $scope.bindCss6 = $sce.trustAsHtml(editor_6_css.getValue())
+    $scope.$apply()
+  )
+  # Slide_6 End  
 ]
 
 $(document).ready ->

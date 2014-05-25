@@ -68,7 +68,7 @@ body {
   z-index: 20;
   left: 50%;
   top: 10px;
-  margin-left: -75px;
+  margin-left: -45px;
 }
 .swiper-pagination-switch {
   display: inline-block;
@@ -110,53 +110,8 @@ body {
     height: 300px;
     overflow: scroll;
   }
-  .slide1, .slide4 {
+  .slide1, .slide4, .slide5, .slide6 {
     background: #fff;
     color: #000;
   }
-}
-
-
-.wrap-dotted {
-  display: inline-block;
-  text-align: center;
-  margin-left: 50px;
-  div {
-    border-style: dotted;
-  }
-}
-
-.wrap-dashed {
-  display: inline-block;
-  text-align: center;
-  margin-left: 50px;
-  div {
-    border-style: dashed;
-  }
-}
-
-.box1 {
-  border-width: 3px;
-  border-color: #999;
-  width: 100px;
-  height: 100px;
-  margin: 20px;
-}
-
-.box2 {
-  border-width: 3px;
-  border-color: #999;
-  width: 100px;
-  height: 100px;
-  margin: 20px;
-  border-radius: 50%;
-}
-
-.box3 {
-  border-width: 3px;
-  border-color: #999;
-  width: 100px;
-  height: 100px;
-  margin: 20px;
-  border-radius: 20%;
 }
