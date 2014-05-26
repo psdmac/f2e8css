@@ -10,6 +10,13 @@ myApp.controller('MainCtrl', [
       pagination: '.pagination',
       paginationClickable: true
     });
+    $(document).on('keyup', function(e) {
+      if (e.keyCode === 33) {
+        return mySwiper.swipePrev();
+      } else if (e.keyCode === 34) {
+        return mySwiper.swipeNext();
+      }
+    });
     editor_1_html = ace.edit('editor-slide-1-html');
     editor_1_html.setTheme("ace/theme/monokai");
     editor_1_html.getSession().setMode("ace/mode/html");
@@ -623,7 +630,6 @@ $(document).ready(function() {
   };
   resize();
   return $(window).on('resize', function() {
-    console.log('resize...');
     return resize();
   });
 });

@@ -7,6 +7,11 @@ myApp.controller 'MainCtrl', ['$scope','$timeout','$sce', ($scope, $timeout, $sc
     pagination: '.pagination'
     paginationClickable: true
   })
+  $(document).on 'keyup', (e)->
+    if e.keyCode is 33
+      mySwiper.swipePrev()
+    else if e.keyCode is 34
+      mySwiper.swipeNext()
 
   # Slide_1 Begin
   editor_1_html = ace.edit('editor-slide-1-html')
@@ -638,7 +643,6 @@ $(document).ready ->
     $('.editor').css('height', editorHeight/2 - 19 + 'px')
   resize()
   $(window).on 'resize', ->
-    console.log 'resize...'
     resize()
 
 

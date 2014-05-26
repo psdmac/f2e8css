@@ -56,6 +56,20 @@ body {
 .pink-slide {
   background: #973e76;
 }
+.landing {
+  background: url(../img/css1.png);
+  @include background-size(cover);
+  position: relative;
+  .auth {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    font-size: 18px;
+    a {
+      color: #f1f1f1;
+    }
+  }
+}
 .swiper-slide .title {
   font-style: italic;
   font-size: 42px;
@@ -68,7 +82,7 @@ body {
   z-index: 20;
   left: 50%;
   top: 10px;
-  margin-left: -45px;
+  margin-left: -60px;
 }
 .swiper-pagination-switch {
   display: inline-block;
@@ -140,4 +154,9 @@ body {
 .sub-title {
   background: #000;
   padding-left: 10px;
+}
+.lists {
+  font-size: 36px;
+  @include inline-block();
+  margin-left: 200px;
 }
